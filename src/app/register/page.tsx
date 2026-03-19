@@ -2,11 +2,11 @@
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import liff, { type Profile } from '@line/liff';
+import liff from '@line/liff';
 import { supabase } from '@/src/lib/supabase'; // ตรวจสอบ path ให้ตรงกับไฟล์ที่คุณสร้าง
 
 export default function RegisterPage() {
-    const [profile, setProfile] = useState<Profile | null>(null);
+    const [profile, setProfile] = useState<any>(null);
     const [role, setRole] = useState('');
     const [phone, setPhone] = useState('');
     const [loading, setLoading] = useState(true);
